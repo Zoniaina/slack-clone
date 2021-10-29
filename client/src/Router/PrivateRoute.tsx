@@ -1,5 +1,7 @@
 import React from 'react';
 import { Redirect, Route, RouteProps } from 'react-router-dom';
+import MainContent from '../components/MainContent/MainContent';
+import MainProvider from '../providers/MainProvider';
 
 interface MyRouteProps {
   component: any;
@@ -18,9 +20,11 @@ const PrivateRoute: React.FC<MyRouteProps & RouteProps> = (props) => {
       {...rest}
       render={(matchProps) =>
         isAuth ? (
-          <Layout>
-            <Component {...matchProps} />
-          </Layout>
+          <MainProvider>
+            <Layout>
+              <Component {...matchProps} />
+            </Layout>
+          </MainProvider>
         ) : (
           <Redirect to='/auth' />
         )
