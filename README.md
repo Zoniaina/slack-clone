@@ -6,7 +6,7 @@ Le projet est développé avec : React - Nestjs - GraphQL - PostgreSQL - TypeOrm
 
 ## Installation
 
-Vous devez installez nestjs cli, si vous voulez contribuez.
+Vous devez installez nestjs cli, si vous voulez contribuer.
 ```bash
 $ npm i -g @nestjs/cli
 ```
